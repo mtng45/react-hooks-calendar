@@ -1,8 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
-import styledNormalize from 'styled-normalize'
+import reboot from 'styled-reboot'
+
+const rebootCss = reboot()
 
 const GlobalStyles = createGlobalStyle`
-  ${styledNormalize}
+  ${rebootCss}
 `
 
 export default GlobalStyles
