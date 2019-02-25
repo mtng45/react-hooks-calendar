@@ -8,16 +8,20 @@ module.exports = {
     filename: 'calendar.js',
     path: path.resolve(__dirname, 'build')
   },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+    modules: [
+      path.resolve(__dirname, '../'),
+      'node_modules',
+    ],
+  },
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.(j|t)sx?$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
+          loader: 'babel-loader'
         }
       }
     ]
