@@ -2,11 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.js',
   output: {
-    filename: 'calendar.js',
-    path: path.resolve(__dirname, 'build')
+    path: path.resolve(__dirname, '../build'),
+    filename: 'calendar.js'
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
@@ -30,13 +29,5 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
     })
-  ],
-  devServer: {
-    contentBase: 'build',
-    port: 4003,
-    host: '0.0.0.0',
-    open: true,
-    openPage: 'index.html',
-    disableHostCheck: true,
-  }
+  ]
 }
