@@ -21,11 +21,7 @@
 ## Stylelint * Styled-Components
 - [stylelint-processor-styled-components](https://github.com/styled-components/stylelint-processor-styled-components)  
   ```
-  yarn add --save-dev
-    stylelint
-    stylelint-processor-styled-components
-    stylelint-config-styled-components
-    stylelint-config-recommended
+  yarn add -D stylelint stylelint-processor-styled-components stylelint-config-styled-components stylelint-config-recommended
   ```
 
 ## Storybook * Styled-Components

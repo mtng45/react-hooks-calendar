@@ -19,6 +19,7 @@
       "error",
       "always-multiline"
     ],
+    "no-unexpected-multiline": 0,
     "prettier": [
       true,
       {
