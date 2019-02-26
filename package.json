@@ -10,7 +10,8 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "ts": "tsc",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
-    "fix": "npm run lint -- --fix"
+    "fix": "npm run lint -- --fix",
+    "stylelint": "stylelint 'src/**/*.{ts,tsx}'"
   },
   "dependencies": {
     "@types/react": "^16.8.4",
@@ -48,6 +49,10 @@
     "lint-staged": "^8.1.4",
     "open-browser-webpack-plugin": "^0.0.5",
     "prettier": "^1.16.4",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.5.2",
     "typescript": "^3.3.3333",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
@@ -56,7 +61,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "run-s lint"
+      "pre-push": "run-s lint stylelint"
     }
   },
   "lint-staged": {

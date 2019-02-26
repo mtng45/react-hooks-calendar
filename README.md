@@ -18,6 +18,15 @@
     /Users/matsunagakenta/git/mtngun/react-hooks-calendar/src/components/atoms/button/square.tsx
       20:28  error  Unexpected newline between template tag and template literal  no-unexpected-multiline
     ```
+## Stylelint * Styled-Components
+- [stylelint-processor-styled-components](https://github.com/styled-components/stylelint-processor-styled-components)  
+  ```
+  yarn add --save-dev
+    stylelint
+    stylelint-processor-styled-components
+    stylelint-config-styled-components
+    stylelint-config-recommended
+  ```
 
 ## Storybook * Styled-Components
 - [Using the styled-components 💅 createGlobalStyle API with React Storybook](https://medium.com/@cbovis/using-the-styled-components-createglobalstyle-api-with-react-storybook-e2e64255d567)
