@@ -18,7 +18,7 @@ const SquareButton = (props: Props) => {
 }
 
 const StyledSquareButton = styled.div<{
-  disabled: boolean
+  disabled?: boolean
 }>`
   display: flex;
   justify-content: center;
