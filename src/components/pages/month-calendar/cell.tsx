@@ -7,18 +7,18 @@ import Const from 'src/const'
 const { CALENDAR, COLOR } = Const
 
 interface Props {
-  day: Date
+  date: Date
   isDisabled: boolean
   isSelected: boolean
   contents?: any
-  onDateClick: ({ day, contents }: { day: Date; contents?: any }) => void
+  onDateClick: ({ date, contents }: { date: Date; contents?: any }) => void
 }
 
-const CALENDARCell = (props: Props) => {
-  const { day, isDisabled, isSelected, contents, onDateClick } = props
-  const formattedDate = dateFns.format(day, CALENDAR.FORMAT.MONTH.CELLS)
+const CalendarCell = (props: Props) => {
+  const { date, isDisabled, isSelected, contents, onDateClick } = props
+  const formattedDate = dateFns.format(date, CALENDAR.FORMAT.MONTH.CELLS)
   return (
-    <Cell isDisabled={isDisabled} onClick={() => onDateClick({ day, contents })}>
+    <Cell isDisabled={isDisabled} onClick={() => onDateClick({ date, contents })}>
       {isSelected && <SelectedIcon />}
       {formattedDate}
       {contents && <div>{contents.availabilityKbnCd}</div>}
@@ -52,4 +52,4 @@ const SelectedIcon = styled.span`
   background-color: ${COLOR.SOFT_RED};
 `
 
-export default CALENDARCell
+export default CalendarCell

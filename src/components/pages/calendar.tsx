@@ -7,9 +7,7 @@ import MonthCalendar from './month-calendar/calendar'
 const Calendar = () => {
   const state = useContext(CalendarContext)
   const dispatch = useContext(DispatchContext)
-  console.info('--state--', state)
   useEffect(() => {
-    console.warn('--useEffect--')
     fetchCommon({ method: 'get', url: 'xxxxx' })
   }, [])
   return (
@@ -20,7 +18,7 @@ const Calendar = () => {
         contentsList={[]}
         onNextMonthClick={() => dispatch({ type: 'addMonth' })}
         onPrevMonthClick={() => dispatch({ type: 'subMonth' })}
-        onDateClick={(day) => dispatch({ type: 'setSelectedDay', payload: day })}
+        onDateClick={(date) => dispatch({ type: 'setSelectedDay', payload: date })}
       />
     </>
   )

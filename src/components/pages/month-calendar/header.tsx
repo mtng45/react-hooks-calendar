@@ -14,7 +14,7 @@ interface Props {
   onPrevMonthClick: () => void
 }
 
-const CALENDARHeader = (props: Props) => {
+const CalendarHeader = (props: Props) => {
   const { currentMonth, onNextMonthClick, onPrevMonthClick } = props
   const dateFormat = CALENDAR.FORMAT.MONTH.HEADER
   return (
@@ -35,4 +35,4 @@ const Wrapper = styled.div`
   margin-bottom: ${SIZE.MARGIN.BASE}px;
 `
 
-export default CALENDARHeader
+export default CalendarHeader

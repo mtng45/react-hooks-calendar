@@ -11,7 +11,7 @@ interface Props {
   currentMonth: Date
   selectedDate: Date
   contentsList: any
-  onDateClick: ({ day, contents }: { day: Date; contents?: any }) => void
+  onDateClick: ({ date, contents }: { date: Date; contents?: any }) => void
 }
 
 const CalendarCells = (props: Props) => {
@@ -38,7 +38,7 @@ const CalendarCells = (props: Props) => {
       days.push(
         <CalendarCell
           key={dateFns.format(day, CALENDAR.FORMAT.MONTH.CELLS)}
-          day={cloneDay}
+          date={cloneDay}
           isDisabled={!dateFns.isSameMonth(day, monthStart)}
           isSelected={dateFns.isSameDay(day, selectedDate)}
           contents={contents && contents}
@@ -59,6 +59,8 @@ const Week = styled.div`
   display: flex;
 `
 
-const Month = styled.div``
+const Month = styled.div`
+  display: block;
+`
 
 export default CalendarCells

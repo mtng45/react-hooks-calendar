@@ -10,7 +10,7 @@ interface Props {
   contentsList: any
   onNextMonthClick: () => void
   onPrevMonthClick: () => void
-  onDateClick: ({ day, contents }: { day: Date; contents?: any }) => void
+  onDateClick: ({ date, contents }: { date: Date; contents?: any }) => void
 }
 
 const MonthCalendar = (props: Props) => {

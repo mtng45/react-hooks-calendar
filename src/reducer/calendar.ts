@@ -1,6 +1,6 @@
 import dateFns from 'date-fns'
 // reducer
-export const initialState: CalendarState = {
+export const initialState: IfCalendarState = {
   currentMonth: new Date(),
   selectedDate: {
     date: new Date(),
@@ -8,7 +8,7 @@ export const initialState: CalendarState = {
   },
 }
 
-export interface CalendarState {
+export interface IfCalendarState {
   currentMonth: Date
   selectedDate: {
     date: Date
@@ -16,7 +16,7 @@ export interface CalendarState {
   }
 }
 
-const calendarReducer = (state: CalendarState = initialState, action: any) => {
+const calendarReducer = (state: IfCalendarState = initialState, action: any) => {
   switch (action.type) {
     case 'addMonth': {
       return { ...state, currentMonth: dateFns.addMonths(state.currentMonth, 1) }
