@@ -20,7 +20,7 @@ const Calendar = () => {
         contentsList={[]}
         onNextMonthClick={() => dispatch({ type: 'addMonth' })}
         onPrevMonthClick={() => dispatch({ type: 'subMonth' })}
-        onDateClick={(day) => dispatch({ type: 'setSelectedDay', payload: day})}
+        onDateClick={(day) => dispatch({ type: 'setSelectedDay', payload: day })}
       />
     </>
   )

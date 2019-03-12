@@ -4,7 +4,7 @@ export const initialState: CalendarState = {
   currentMonth: new Date(),
   selectedDate: {
     date: new Date(),
-    contents: {}
+    contents: {},
   },
 }
 
@@ -19,10 +19,10 @@ export interface CalendarState {
 const calendarReducer = (state: CalendarState = initialState, action: any) => {
   switch (action.type) {
     case 'addMonth': {
-      return { ...state, currentMonth: dateFns.addMonths(state.currentMonth, 1)}
+      return { ...state, currentMonth: dateFns.addMonths(state.currentMonth, 1) }
     }
     case 'subMonth': {
-      return { ...state, currentMonth: dateFns.subMonths(state.currentMonth, 1)}
+      return { ...state, currentMonth: dateFns.subMonths(state.currentMonth, 1) }
     }
     case 'setSelectedDay': {
       return { ...state, selectedDate: action.payload }

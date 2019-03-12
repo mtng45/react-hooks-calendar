@@ -93,12 +93,12 @@ const SquareButton = styled.div<{
     width: 16px;
     height: 16px;
     ${props =>
-      props.type === 'prev' &&
+    props.type === 'prev' &&
       css`
         transform: rotate(90deg);
       `}
     ${props =>
-      props.type === 'next' &&
+    props.type === 'next' &&
       css`
         transform: rotate(270deg);
       `}
